@@ -14,8 +14,8 @@ function App() {
   return (
     <div className={style.page}>
       <div className={style.content}>
-        <p className={style.title}>BMR calculator</p>
-        <p className={style.description}>The Basal Metabolic Rate (BMR) Calculator estimates your basal metabolic rate—the amount of energy expended while at rest in a neutrally temperate environment </p>
+        <p className={style.title}>BMR Calculator</p>
+        <p className={style.description}>The Basal Metabolic Rate (BMR) Calculator estimates your basal metabolic rat: the amount of energy expended while at rest in a neutrally temperate environment </p>
         <div className={style.tablediv}>
           <BMRform />
           

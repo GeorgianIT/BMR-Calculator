@@ -4,9 +4,9 @@ import { useState } from 'react'
 
 
 const style = {
-    form: 'mt-10 text-[20px]',
-    button: 'mt-10 w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out',
-    container: '',
+    form: 'mt-10 text-[20px] text-center',
+    button: 'mt-10 w-full px-6 py-2.5 w-[50%] ml-[25%] mr-[25%] bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out',
+    container: 'w-[40%]',
 }
 
 const BMRform = () => {
@@ -39,23 +39,23 @@ const BMRform = () => {
     return (     
     <div className={style.container}>
     <form onSubmit={handleCalculate} className={style.form}>
-            <div className='grid grid-cols-2 gap-4'>
-                <label>Age</label>
-                <input name='age' onChange={handleChange} className='w-[150px]' type='number' min="15" max="80" />
+            <div className='grid grid-cols-2 gap-4 w-[80%] m-auto'>
+                <label >Age:</label>
+                <input name='age' onChange={handleChange} required className='w-[150px]' type='number' min="15" max="80" />
                 
-                <label>Gender</label>
-                <div className='form-groups space-x-2'>        
+                <label>Gender:</label>
+                <div className='form-groups space-x-2 flex justify-start'>        
                     <input name='gender' value='Male' onChange={handleChange} type="radio"></input><span>Male</span>
                     <input name='gender' value='Female' onChange={handleChange} type="radio"></input><span>Female</span>
                 </div>
                 
-                <label>Height</label>
-                <div className='form-groups'>  
-                    <input name='height' onChange={handleChange} className='w-[150px]' type='number' min="55" max="236" /><span className='text-slate-500'>cm</span>
+                <label>Height:</label>
+                <div className='form-groups flex justify-between'>  
+                    <input name='height' onChange={handleChange} required className='w-[150px]' type='number' min="55" max="236" /><span className='text-slate-500'>cm</span>
                 </div>
-                <label>Weight</label>
-                 <div className='form-groups'>    
-                    <input name='weight' onChange={handleChange} className='w-[150px]' type='number' min="35" max="635"/><span className='text-slate-500'>kg</span>
+                <label>Weight:</label>
+                 <div className='form-groups flex justify-between'>    
+                    <input name='weight' onChange={handleChange} required className='w-[150px]' type='number' min="35" max="635"/><span className='text-slate-500'>kg</span>
                     </div>
                 </div> 
                 <button type='submit' className={style.button}>Calculate</button>
